@@ -1,6 +1,4 @@
 object Combos extends App {
-  println("hello world")
-
   def nCombos(n: Int, k: Int): Int = {
     if (k == 1) return n
     else if (k == n) return 1
