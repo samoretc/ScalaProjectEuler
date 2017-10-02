@@ -1,8 +1,8 @@
 object Problem15 extends App {
   val size = 21
   val arr = Array.ofDim[Long](size, size)
-  def printArr = for(r <- 0 until size; c <- 0 until size) { if (c == 0) println(""); print(arr(r)(c) + "   ");} // helper method for debugging
 
+  def printArr = for(r <- 0 until size; c <- 0 until size) { if (c == 0) println(""); print(arr(r)(c) + "   ");} // helper method for debugging
 
   for (a <- 0 until size) {
     arr(a)(size - 1) = 1
@@ -17,6 +17,6 @@ object Problem15 extends App {
       arr(a)(b) = arr(a + 1)(b) + arr(a)(b + 1)
     }
   }
-  printArr
+
   println(arr(0)(0))
 }
